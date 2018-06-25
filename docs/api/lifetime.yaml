@@ -23,6 +23,14 @@ events:
     description: |
       Emitted when received `applicationDidFinishLaunching` notification.
 
+  - callback: void on_open(std::string fileURLPath)
+    platform: ['macOS']
+    description: |
+      Emitted when received `applicationWillUpdate`. It is emitted once with a
+      url string containing `file:///absolute/path/to/file` for each each file
+      that you choose to `open with` this program. Will be emitted multiple
+      times while program is running as files are opened during program run.
+
   - callback: void on_activate()
     platform: ['macOS']
     description: |
